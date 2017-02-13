@@ -1,9 +1,6 @@
- // This script and many more are available free online at
- // The JavaScript Source!! http://www.javascriptsource.com
-
 console.log('hello');
 
-// Insert number of questionsf
+// Insert number of questions
 var numQues = 4;
 
 // Insert number of choices in each question

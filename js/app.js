@@ -17,27 +17,23 @@ const sumScore = (score, e) =>  isAnswerCorrect(e) ? score+1 : score;
 
 const questionNumber = name => name.slice(1);
 
-
-
 function getScore(form) {
   console.log(this);
+// the below allows you to access on the console the objects of window to see what it contains
   window.form = form
 
+// this allows you to console log each element using a loop
   Array.from(form.elements).forEach(e => console.log(e.checked, e.value, e.name, answers[e.name]));
 
+// array.from is tranforming an array-like-object that wasn't an array into an array
+// reduce takesobjects from an array and reduces them to total of its elements
   let score = Array.from(form.elements).reduce(sumScore, 0);
   console.log(score);
 
   form.percentage.value = score;
 
+// object keys is returning the objcts properties in th exact order & map creates a new array
   form.solutions.value = Object.keys(answers)
     .map(name => `${questionNumber(name)}.  ${answers[name]}\r\n`).join('');
 
-
-
-//   let correctAnswers = "";
-//   for (i=1; i<=numQues; i++) {
-//     correctAnswers += i + ". " + answers[i-1] + "\r\n";
-//   }
-//   form.solutions.value = correctAnswers;
 }

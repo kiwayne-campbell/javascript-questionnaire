@@ -21,4 +21,10 @@ As you can see it's quite long winded and verbose but in terms of a building a q
 
 - ES6 helps achieve this which is great. From this I have learnt a lot & will attempt to rebuild this project again using the ES6 techniques and understanding how my early attempts were refactored & condensed.
 
+
+
+
+
+
+
 This has helped me look at creating better readable more friendly code.
